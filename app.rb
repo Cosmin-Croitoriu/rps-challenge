@@ -1,4 +1,5 @@
 require 'sinatra/base'
+require './lib/computer'
 
 class Rps < Sinatra::Base
   use Rack::Session::Cookie
@@ -15,6 +16,12 @@ class Rps < Sinatra::Base
   get '/play' do
     @player = session[:player]
     erb :play
+  end
+
+  get '/game' do
+    @computer = Computer.new(params[;selection])
+    @computer.selection
+    erb :game
   end
 
 end
