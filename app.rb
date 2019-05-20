@@ -19,8 +19,8 @@ class Rps < Sinatra::Base
   end
 
   get '/game' do
-    @computer = Computer.new(params[;selection])
-    @computer.selection
+    @computer = Computer.new
+    p @computer.selection
     erb :game
   end
 
