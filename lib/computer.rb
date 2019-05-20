@@ -1,8 +1,9 @@
-
 class Computer
-  
+  SELECT = ["rock", "paper", "scissors"]
+  attr_reader :selection
+
   def initialize
-    @selection = GAME::SELECT.sample
+    @selection = SELECT.sample
   end
 
 end
